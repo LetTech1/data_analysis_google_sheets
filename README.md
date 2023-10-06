@@ -4,7 +4,7 @@ O repositório contém um resumo do aprendizado referente ao curso da Alura sobr
 
 <div align="center">
 
-![Banner do Curso](image-1.png)
+![Banner do Curso](imagens/image-1.png)
 </div>
 
 - A ferramenta que utilizada no curso foi o **Google Sheets**, para quem não sabe o Google Sheets ou, simplesmente, Google Planilhas é como se fosse uma versão online do Excel.
@@ -27,7 +27,7 @@ Marcela envia a base com os dados, e o analista que no caso sou eu(Letícia) imp
 
 <div align="center">
 
-![Planilha no Google Sheets](image-2.png)
+![Planilha no Google Sheets](imagens/image-2.png)
 
 <div align="left">
 Um gráfico é adicionado para que a Marcela tenha maior facilidade em diferenciar os elementos, isso não significa que o modelo adicionado seja o melhor para esse tipo de análise, porém o objetivo no entanto é aprendermos a inserir um gráfico por meio do Google Sheets. Em seguida veremos as diferenças entre os tipos de gráficos e quando usa-los.<p>
@@ -35,11 +35,11 @@ Um gráfico é adicionado para que a Marcela tenha maior facilidade em diferenci
 Para inserir um gráfico, selecione os dados da tabela e siga os passos abaixo:
 </div>
 
-![Destaca o campo Inserir no Google Sheets](image-3.png)
+![Destaca o campo Inserir no Google Sheets](imagens/image-3.png)
 
-![Mostra o campo para inserir um gráfico](image-4.png)
+![Mostra o campo para inserir um gráfico](imagens/image-4.png)
 
-![Gráfico adicionado](image-5.png)
+![Gráfico adicionado](imagens/image-5.png)
 
 <div align="left">
 O Google Sheets adiciona o modelo de gráfico de maneira automática, sendo assim podemos modificar. É preciso dar um duplo clique no gráfico para que as configurações apareçam, como mostra a imagem abaixo:<p>
@@ -48,7 +48,7 @@ Na aba de "Configuração", clique no campo "Tipo de Gráfico" e escolha o model
 
 </div>
 
-![Como mudar o tipo de gráfico](image-6.png)
+![Como mudar o tipo de gráfico](imagens/image-6.png)
 </div>
 
 ## Módulo 2 - Gráficos
@@ -68,11 +68,11 @@ Para que não haja confusão entre esses dois tipos de gráfico, vale ressaltar 
 
 **Gráfico de Barras (Horizontal)**<p>
 
-![Gráfico de Barras](image-7.png)<p>
+![Gráfico de Barras](imagens/image-7.png)<p>
 
 **Gráfico de Colunas (Vertical)**<p>
 
-![Gráfico de Colunas](image-8.png)
+![Gráfico de Colunas](imagens/image-8.png)
 </div>
 
 > [!IMPORTANT]
@@ -85,18 +85,18 @@ Para que não haja confusão entre esses dois tipos de gráfico, vale ressaltar 
 
 **Gráfico de Pizza**
 
-![Gráfico de Pizza](image-11.png)
+![Gráfico de Pizza](imagens/image-11.png)
 
 **Gráfico de Rosca**
 
-![Gráfico de Rosca](image-12.png)
+![Gráfico de Rosca](imagens/image-12.png)
 </div>
 
 > [!IMPORTANT]
 > Esses tipos de gráficos devem ser usados para analisar poucos dados. Devemos prestar atenção quando os valores são bem proxímos, pois o ser humano tem dificuldade para diferenciar o volume e área de forma intuitiva, como mostra a imagem abaixo.<p>
 <div align="center">
 
-![Gráfico com valores próximos](image-13.png)
+![Gráfico com valores próximos](imagens/image-13.png)
 
 Quando olhamos para esse gráfico, é difícil saber de maneira imadiata qual área é maior.
 
@@ -108,11 +108,11 @@ Quando olhamos para esse gráfico, é difícil saber de maneira imadiata qual á
 
 **Gráfico de Linha**
 
-![Gráfico de Linha](image-14.png)
+![Gráfico de Linha](imagens/image-14.png)
 
 **Gráfico de Área**
 
-![Gráfico de Área](image-15.png)
+![Gráfico de Área](imagens/image-15.png)
 
 </div>
 
