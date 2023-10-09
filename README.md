@@ -123,6 +123,144 @@ Quando olhamos para esse gráfico, é difícil saber de maneira imadiata qual á
 
 Quando temos uma base de dados, podemos adicionar outras variáveis para complementar a analise, tais como:
 
-- Velocidade
+- **Velocidade**  
+Com essa informação, conseguimos ver qual a velocidade de nossos dados, o deslocamento conforme o tempo passa. O ideal é que a velocidade seja crescente, porém as vezes quando analisamos os dados eles parecem estar aumentando, porém a velocidade está baixa.
 
-- Aceleração
+Fórmula:
+<div align="center">
+v = Δs/Δt
+</div>
+
+v = velocidade  
+Δs = espaço  
+Δt = tempo
+
+- **Aceleração**  
+Variação da velocidade em relação ao tempo.  
+
+Fórmula:
+<div align="center">
+a = Δv/Δt
+</div>
+
+a = aceleração  
+Δv = velocidade  
+Δt = tempo
+
+**Exemplo:**
+<div align="center">
+
+![Dados + Velocidade + Aceleração](image.png)
+
+![Gráficos](image-1.png)
+</div>
+
+### O que é um arquivo CSV?
+C = Comma(vírgula)  
+S = Separated(separado)  
+V = Values(valores, dados)  
+
+Arquivos CSV são frequentemente usados, devido serem mais leves e compatíveis com vários aplicativos.  
+Ele aceita outros tipos de separadores, além da vírgula.  
+Podemos edita-lo por meio do bloco de notas.
+
+### Removendo dados faltantes
+Quando importamos uma base de dados, podemos nos comparar com algumas células sem valor ou preenchidas com #N/D - Não Disponível ou #N/A - Not available. Nesses casos, temos algumas estratégias para preencher dados faltantes, uma delas é por meio da média.  
+**Exemplo:**  
+<div align="center">
+
+![Célula com dado faltante](image-2.png)  
+Podemos observar que na base o dado da<br> primeira coluna destacada não estava disponível,<br> então utilizamos a média para preenche-lo.<br>
+
+![Fórmula para encontrar a média](image-3.png)  
+</div>
+
+SE() = Fórmula condicional, isto é, se uma condição for verdadeira ele retornará um valor, caso contrário, o apresenta outro resultado.  
+ÉNUM() = Verifica se o tipo do valor de uma determinada célula é número.  
+MÉDIA() = Calcula a média de um determinado intervalos ou campos.  
+
+Sendo assim, na imagem acima, ele usa a fórmula de condição SE(), dentro da mesma, utiliza a fórmula ÉNUM() para representar a condição, então ele verifica se o valor de derterminada célula é do tipo numérico, se sim, significa que ela está preenchida corretamente, se não, ele deverá preencher por meio da média do campo anterior e posterior.  
+
+Você pode se perguntar qual a necessidade de preencher esses campos, pois olhando diretamente para a base de dados, talvez eles não façam tanta diferença, mas quando vamos visualizar essas informações de outra maneira, isto é, por meio de gráficos, conseguimos observar nitidamente a difereça.  
+**Exemplo:**  
+<div align="center">
+
+![Gráficos](image-4.png)  
+Antes e Depois
+</div>
+
+### Medidas de dispersão  
+
+>**Variância**  
+
+Fórmula:
+
+<div align="center">
+
+![Fórmula da variância](image-9.png)
+</div>
+
+Utilizada para sabermos o quanto nossos dados estão indo para cima e para baixo, o quanto ele variam em relação a média, isto é, tendência central.  
+Para calcular no Google Sheets, vamos começar pela seguinte fórmula: 
+<div align="center">
+
+Xi - Média
+</div>
+
+Xi = um determinado valor dentro do conjunto de dados  
+Média = soma de um determinado intervalo ou valores distintos, dividido pela quantidade de elementos.  
+
+Vamos realizar esse cálculo com nossos dados.  
+**Exemplo**
+<div align="center">
+
+![Primeiro passo no cálculo da variância](image-5.png)  
+Nesse exemplo, pegamos apenas um pequeno recorte dos dados disponibilizados.
+</div>
+
+Na coluna Xi-Média, fazemos a subtração da segunda coluna(Número de livros vendidos) com a terceira(Média).  
+Quando realizamos a somatória da nova coluna que acabamos de calcular(Xi-Média) o resultado é zero, então, vamos para uma segunda etapa, calcular a raiz quadrada desses valores (Xi-Média)^2.  
+No Google Sheets, a fórmula que realiza o cálculo da potência é =POW()
+<div align="center">
+
+![Cálculo da raiz quadrada](image-6.png)
+Adicionamos mais uma coluna com a raiz quadrada de cada valor referente a coluna 4(Xi-Média).
+</div>
+
+Feito isso, vamos calcular a média da coluna (Xi-Média)2
+
+<div align="Center">
+
+![Achando a variância](image-7.png)  
+Para acharmos o valor da variância, utilizamos a seguinte fórmula:
+
+![Fórmula da média](image-8.png)
+</div>
+
+>**Desvio Padrão**  
+
+O desvio padrão, é o que se espera que aconteça de variação em torno da média dos dados, para mais ou para menos.  
+Vocês lembram que no período de eleições, quando assistimos aos noticiários, os jornalistas nos dizem que uma pesquisa foi realizada e que o candidato A tem 30% dos votos com uma **MARGEM DE ERRO** de 4%. Isso é o **DESVIO PADRÃO**, se 30% representa 1000 votos e no dia da decisão o cadidato obter 1300 votos ou 700, a pesquisa estava realmente correta, pois o número de votos ficou dentro da margem de erro, desvio padrão. Isso simboliza um resultado que já era esperado.
+
+No Google Sheets, para acharmos o desvio padrão do exemplo iniciado acima, é necessário apenas tirar da raiz o valor da variância.
+
+<div align="center">
+
+![Fórmula para retirar da raiz](image-10.png)
+
+![Resultado do desvio padrão](image-11.png)
+</div>
+
+Nós fizemos o passo a passo do cálculo da variância e do desvio padrão, e isso é necessário para entendermos como funciona cada parte do cálculo, porém, no Google Sheets há fórmulas que calculam essas variáveis de maneira direta.  
+
+**Variância** -> **=VARP()**  
+**Desvio Padrão** -> **=DESVPAD()**
+
+A fórmula de desvio padrão tem uma diferença no resultado comparando com o cálculo feito passo a passo, porém é algo mínimo, então não consideramos relevante.
+
+Observe na imagem abaixo, os resultados da Variância e Desvio Padrão da base de dados do exemplo, realizados de maneira direta:
+
+<div align="Center">
+
+![Variância e Desvio Padrão](image-12.png)
+</div>
